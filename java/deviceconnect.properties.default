@@ -28,6 +28,6 @@ android.ids=
 android.bundle.id=
 
 
-# The phone number to call
+# The phone number to call (no dashes)
 # i.e. 5555555555
 phone.number=
