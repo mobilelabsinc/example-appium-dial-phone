@@ -84,7 +84,11 @@ public class TestDialPhone extends AppiumController {
     @Description("Verifies that the Search Button appears on the Search Screen after entering the username and password and then clicking the Sign In button on the login screen")
     public void dialTest() throws Exception {
         try {
-            phoneScreen.dialNumber(PHONE_NUMBER);
+            Properties props = new Properties();
+            props.load(new FileReader(new File(DEVICECONNECT_PROPERTIES_FILE)));
+            String phoneNumber = props.getProperty(PHONE_NUMBER);
+
+            phoneScreen.dialNumber(phoneNumber);
             Assert.assertTrue(phoneScreen.isEndCallButtonPresent());
             getScreenshot("Phone Screen");
             phoneScreen.hangUp();
