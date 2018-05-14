@@ -23,7 +23,7 @@ class DialPhoneTestCase(unittest.TestCase):
     def test_dial_phone(self):
         self.driver.find_element_by_xpath("//XCUIElementTypeButton[@label='Keypad']").click()
 
-        for c in "6789473795":
+        for c in "5555555555":
             self.driver.find_element_by_xpath("//XCUIElementTypeButton[@label='" + c + "']").click()
 
         self.driver.find_element_by_xpath("//XCUIElementTypeButton[@label='Call']").click()
